@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sil Fazendo Arte</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="menu">
+            <div class="overlay" id="nav">
+                <a href="#" class="closeBtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="#" <i class="fa fa-home">Home</a>
+                    <a href="#" <i class="fa fa-heart">&nbsp;Sobre</a>
+                    <a href="#" <i class="fa fa-shopping-bag">Encomendas</a>
+                    <a href="#" <i class="fa fa-phone-square">Contato</a>
+                    <a href="./html/calculadora.html" <i class="fa fa-phone-square">Calculadora</a>
+                </div>
+
+
+            </div>
+            <button class="nav-button" onclick="openNav()">
+				<i class="fa-solid fa-bars fa-2x"></i>
+			</button>
+        </div>
+
+        <div class="container">
+            <img src="./resources/logo.png" class="logo">
+        </div>
+
+    </header>
+    <main>
+        <section class="container">
+            <h2 class="titulo">Encomendas</h2>
+
+            <label class="label" for="filtrar_tabela">Filtrar:</label>
+            <input type="text" name="filtro" id="filtrar_tabela" placeholder="Digite ium cliente para pesquisar.">
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Valor Unitário</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-clientes">
+                    <tr class="cliente" id="cliente1">
+                        <td class="info-nome">Margarete</td>
+                        <td class="info-produto">Jogo Americano (4 peças) - Rosa</td>
+                        <td class="info-qtde">1</td>
+                        <td class="info-valor">Trinta Reais</td>
+                        <td class="info-total">0</td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="info-nome">Carolina</td>
+                        <td class="info-produto">Tapetes Cozinha (3 peças) - Azul</td>
+                        <td class="info-qtde">2</td>
+                        <td class="info-valor">50</td>
+                        <td class="info-total">0</td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="info-nome">Daniele</td>
+                        <td class="info-produto">Pulseira Cristal Colorida</td>
+                        <td class="info-qtde">ABC</td>
+                        <td class="info-valor">25</td>
+                        <td class="info-total">0</td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="info-nome">Maurice</td>
+                        <td class="info-produto">Pulseira Cristal Vermelha</td>
+                        <td class="info-qtde">1</td>
+                        <td class="info-valor">25</td>
+                        <td class="info-total">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span id="erro-ajax" class="invisivel">Erro ao buscar as encomendas.</span>
+            <button id="buscar-encomendas" class="botao">Buscar encomenda</button>
+        </section>
+
+        <h1 id="titulo2">Adicionar nova encomenda</h1>
+        <hr>
+
+        <div id="forms">
+            <!--Exibe os erros de validção do formulario-->
+            <ul id="mensagens-erro"></ul>
+            <form id="form-add" action="">
+
+                <label for="Nome">Nome:</label><br>
+                <input type="text" class="campo" id="Nome" name="Nome" size="43" placeholder="Nome aqui!"> <br>
+
+                <label for="Quantidade">Quantidade:</label><br>
+                <input type="number" class="campo" id="Quantidade" name="Quantidade" size="43" placeholder="Quantidade aqui!"><br>
+
+
+
+                <label for="Produto">Produto:</label><br>
+                <select id="Produto">
+					<option id="Produto1"></option>
+					<option id="Produto2">Jogo Americano (4 peças) - Rosa</option>
+					<option id="Produto3">Tapetes Cozinha (3 peças) - Azul</option>
+					<option id="Produto4">Pulseira Cristal Colorida</option>
+					<option id="Produto5">Pulseira Cristal Vermelha</option>
+				</select> <br>
+
+                <label for="Unitario">Valor:</label><br>
+                <input type="number" class="campo" id="Unitario" name="Unitario" size="43" placeholder="Valor aqui!"><br>
+
+
+                <button id="adicionar-encomenda" class="botao">Adicionar</button>
+
+
+            </form>
+
+        </div>
+        <h1 id="titulo2">Buscar CEP</h1>
+        <hr>
+
+        <div id="forms">
+            <form class="cepFomr">
+                <div class="frm-group">
+                    <label>CEP</label>
+                    <input type="text" name="cep" />
+                </div>
+
+                <button type="button">ENTER</button>
+
+                <div class="frm-group">
+                    <label>Rua</label>
+                    <input disabled type="text" name="rua" />
+                </div>
+
+                <div class="frm-group">
+                    <label>Bairro</label>
+                    <input disabled type="text" name="bairro" />
+                </div>
+
+                <div class="frm-group">
+                    <label>Cidade</label>
+                    <input disabled type="text" name="cidade" />
+                </div>
+
+                <div class="frm-group">
+                    <label>Estado</label>
+                    <input disabled type="text" name="estado" />
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <script src="./js/calculo-total.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/remove-linha.js"></script>
+    <script src="./js/filtra.js"></script>
+    <script src="./js/busca-encomenda.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/CEP.js"></script>
+
+</body>
+
+</html>

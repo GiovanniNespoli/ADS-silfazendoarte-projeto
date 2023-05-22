@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/calculadora.css">
+    <script src="../js/calculadora.js"></script>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="overlay" id="nav">
+                <a href="#" class="closeBtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="#" <i class="fa fa-home">Home</a>
+                    <a href="#" <i class="fa fa-heart">&nbsp;Sobre</a>
+                    <a href="#" <i class="fa fa-shopping-bag">Encomendas</a>
+                    <a href="#" <i class="fa fa-phone-square">Contato</a>
+                    <a href="./calculadora.html" <i class="fa fa-phone-square">Calculadora</a>
+                </div>
+            </div>
+            <button class="nav-button" onclick="openNav()">
+				<i class="fa-solid fa-bars fa-2x"></i>
+			</button>
+        </div>
+
+        <div class="container">
+            <img src="../resources/logo.png" class="logo">
+        </div>
+
+    </header>
+    <main>
+        <section>
+            <div class="grid">
+                <h1 class="titulo">Calculadora de custos</h1>
+                <form onsubmit="calcular()">
+                    <div class="inputsEstaticos">
+                        <div>
+                            <input name="nomeProduto" type="text" placeholder="Nome do produto">
+                        </div>
+                        <div>
+                            <input name="lucro" type="text" placeholder="% de lucro">
+                        </div>
+                    </div>
+                    <h1 style="margin: 0;" class="titulo">Insumos e embalagem</h1>
+                    <div class="inputsContent">
+                        <div id="inputs1">
+                            <input class="margin" name="nomeInsumo" type="text" placeholder="Nome do insumo">
+                            <input class="margin" name="qntdInsumo" type="text" placeholder="Quantidade do insumo para o produto">
+                        </div>
+                        <div id="inputs2">
+                            <input class="margin" name="qntdEmbalagem" type="text" placeholder="Quantidade do insumo na embalagem de comprar">
+                            <input class="margin" name="valorInsumo" type="text" placeholder="Valor do insumo">
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button onclick="addInputs()">Adicionar insumo</button>
+                        <button type="submit">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="footerValue">
+            <div>
+                <h2>Valor Total:</h2>
+                <h2 class="valorTotal">R$ 00.00</h2>
+            </div>
+            <div>
+                <h2>Valor Total Arredondado:</h2>
+                <h2 class="valorArredondado">R$ 00.00</h2>
+            </div>
+            <div>
+                <h2>Desconto Aplicado:</h2>
+                <h2 class="descontoAplicado">R$ 00.00</h2>
+            </div>
+            <div>
+                <h2>Valor sem desconto:</h2>
+                <h2 class="valorSemDesconto">R$ 00.00</h2>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

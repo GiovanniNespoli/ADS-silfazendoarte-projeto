@@ -1,0 +1,185 @@
+body {
+	font-family: "Arial";
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+header {
+	background-color: purple;
+	display: flex;
+}
+
+.nav-button {
+	border: 0;
+	border-radius: 4px;
+	padding: 8px;
+	background-color: purple;
+	margin: 0;
+	cursor: pointer;
+}
+
+.nav-button i {
+	color: beige;
+}
+
+.overlay {
+	width: 0%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	overflow-x: hidden;
+	transition: all 0.5s;
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+	transition: 0.3s;
+	display: block;
+}
+
+.overlay a:hover,
+.closeBtn:hover,
+.closeBtn:focus {
+	color: purple;
+}
+
+.overlay .closeBtn {
+	font-size: 30px;
+	position: absolute;
+}
+
+.container {
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.logo {
+	animation-name: example;
+	animation-duration: 2s;
+	width: 180px;
+}
+
+@keyframes example {
+	0% {
+		transform: rotate(0deg);
+		width: 0;
+	}
+
+	100% {
+		transform: rotate(1080deg);
+		width: 1200px;
+	}
+}
+
+section h2 {
+	font-size: 42px;
+	display: block;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+table {
+	width: 100%;
+	margin-bottom: .5em;
+	table-layout: fixed;
+}
+
+td,
+th {
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+th {
+	font-weight: bold;
+	background-color: #EEE;
+}
+
+/*---------------------------*/
+#titulo2 {
+	margin-top: 5%;
+	margin-left: 15%;
+}
+
+hr {
+	width: 70%;
+}
+
+/*----------------------*/
+
+#forms {
+	text-align: center;
+	padding: 10px 0 30px 0;
+	margin: 0 0 40px 0;
+}
+
+form {
+	font-size: 20px;
+}
+
+select {
+	font-size: 20px;
+}
+
+.campo {
+	margin: 0;
+	padding-bottom: 1em;
+	width: 50%;
+	border: 1px solid #ccc;
+	padding: .7em;
+}
+
+
+
+#mensagens-erro {
+	color: rgb(160, 0, 0);
+}
+
+.erro {
+	background-color: rgb(250, 83, 83);
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.invisivel {
+	display: none;
+}
+
+#filtrar_tabela {
+	width: 30%;
+	height: 35px;
+	margin-bottom: 30px;
+}
+
+.botao {
+	border-radius: 4px;
+	height: 50px;
+	width: 150px;
+	margin-top: 20px;
+	background-color: purple;
+	color: #fff;
+	font-size: 16px;
+	border-color: transparent;
+}
